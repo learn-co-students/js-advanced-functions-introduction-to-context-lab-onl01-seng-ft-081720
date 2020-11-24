@@ -4,10 +4,6 @@ const createEmployeeRecord = employee => {
     return {firstName: firstName, familyName: familyName, title: title, payPerHour: payPerHour, timeInEvents: [], timeOutEvents: []}
 
 }
-const createEmployeeRecords = employees => {
-    // employees.map(employee => createEmployeeRecord(employee))
-    const employeesAr = []
-    for(const employee in employee) {
-       employee.push(createEmployeeRecord(employee))
-    }
+const createEmployeeRecords = employee => {
+    employee.map(employeeRow => createEmployeeRecord(employeeRow))
 }
