@@ -53,6 +53,8 @@ function createTimeOutEvent(record, time){
 }
 
 function hoursWorkedOnDate(record, date){
+    console.log(record)
+    
     let timeIn = record.timeInEvents[0].hour
     let timeOut = record.timeOutEvents[0].hour
     return ((timeOut - timeIn)/100)
